@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" data-framework="backbonejs">
+    <head>
+        <meta charset="utf-8">
+        <title>Backbone + RequireJS</title>
+        <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/component.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="col-md-12">
+                    <h1 class="navbar-brand">zigolis.com</h1>
+                </div>
+            </div><!-- .row -->
+        </header>
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Backbone + Require</h1>
+                <p>
+                    This is a simple and minimalist example using Backbone and
+                    RequireJS. The one works with Views/Sub-Views and Events.
+                </p>
+            </div>
+        </div>
+
+        <section class="container main">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>JS News</h3>
+
+                    <ul class="box">
+                        <li>August 2014</li>
+                        <li>July 2014</li>
+                        <li>June 2014</li>
+                        <li>May 2014</li>
+                        <li>April 2014</li>
+                        <li>March 2014</li>
+                        <li>February 2014</li>
+                        <li>January 2014</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h2>Get notified when news are available</h2>
+
+                    <form>
+                        <input type="email" id="email" class="form-control input-lg" placeholder="Inform your email" autofocus="">
+                        <button class="btn btn-lg btn-alert btn-block" type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="col-md-3 rails-news">
+                    <h3>Rails News</h3>
+
+                    <ul class="box">
+                        <li>August 2014</li>
+                        <li>July 2014</li>
+                        <li>June 2014</li>
+                        <li>May 2014</li>
+                        <li>April 2014</li>
+                        <li>March 2014</li>
+                        <li>February 2014</li>
+                        <li>January 2014</li>
+                    </ul>
+                </div>
+            </div>
+        </section><!-- container -->
+
+        <footer id="footer">
+            <p>Made with ❤ by a geek from magic island</p>
+        </footer>
+
+        <script data-main="assets/js/main" src="assets/vendor/requirejs/require.js"></script>
+    </body>
+</html>

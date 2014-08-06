@@ -1,0 +1,78 @@
+body {
+
+}
+
+.header {
+    background: #203041;
+    margin: 0;
+}
+
+.header h1 {
+    color: #fff;
+    font-weight: 100;
+    font-size: 25px;
+    padding-left: 0;
+}
+
+.jumbotron {
+    padding: 30px 0;
+}
+
+h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.main {
+    margin-bottom: 130px;
+}
+
+h2, h3 {
+    font-size: 18px;
+}
+
+form {
+    margin-top: 25px;
+}
+
+.btn {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 100;
+    margin-top: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+.box {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-top: 25px;
+    padding: 15px;
+}
+
+.rails-news h3 {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.rails-news ul {
+    text-align: right;
+}
+
+footer {
+    background-color: #203041;
+    bottom: 0;
+    left: 0;
+    padding: 20px 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+}
+
+footer p {
+    color: #526d8a;
+    margin: 0;
+}
