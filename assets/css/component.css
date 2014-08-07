@@ -1,17 +1,16 @@
-body {
-
-}
-
 .header {
     background: #203041;
-    margin: 0;
 }
 
 .header h1 {
     color: #fff;
     font-weight: 100;
     font-size: 25px;
-    padding-left: 0;
+    margin-top: 15px;
+}
+
+.header .col-md-12 {
+    padding: 0;
 }
 
 .jumbotron {
@@ -28,7 +27,8 @@ h1 {
 }
 
 h2, h3 {
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: 100;
 }
 
 form {
@@ -55,7 +55,7 @@ ul {
 
 .rails-news h3 {
     text-align: right;
-    padding-right: 15px;
+    margin-bottom: 25px;
 }
 
 .rails-news ul {
