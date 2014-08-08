@@ -1,38 +1,69 @@
-.header {
-    background: #203041;
+body {
+    font-weight: 100;
 }
 
-.header h1 {
-    color: #fff;
-    font-weight: 100;
-    font-size: 25px;
-    margin-top: 15px;
+.header {
+    background: #203041;
 }
 
 .header .col-md-12 {
     padding: 0;
 }
 
+.header h1 {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 15px 0;
+    font-weight: 100;
+}
+
 .jumbotron {
     padding: 30px 0;
 }
 
-h1 {
-    margin-bottom: 0;
+.jumbotron h1 {
     margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 100;
 }
 
 .main {
-    margin-bottom: 130px;
+    margin-bottom: 30px;
 }
 
-h2, h3 {
+h2 {
     font-size: 22px;
     font-weight: 100;
 }
 
-form {
-    margin-top: 25px;
+.list-group {
+    font-weight: 200;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+article p {
+    font: 100 18px/25px helvetica;;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 100;
+    text-align: center;
+    color: #fff;
+}
+
+.subscribe {
+    background: #1b222a;
+    padding: 20px 0;
+}
+
+.subscribe form {
+    margin: 25px auto;
+    max-width: 400px;
 }
 
 .btn {
@@ -46,33 +77,15 @@ ul {
     list-style: none;
 }
 
-.box {
-    background-color: #f9f9f9;
-    border-radius: 4px;
-    margin-top: 25px;
-    padding: 15px;
-}
-
-.rails-news h3 {
-    text-align: right;
-    margin-bottom: 25px;
-}
-
-.rails-news ul {
-    text-align: right;
-}
-
 footer {
     background-color: #203041;
-    bottom: 0;
-    left: 0;
     padding: 20px 0;
-    position: fixed;
-    right: 0;
     text-align: center;
+    font-size: 14px;
 }
 
 footer p {
     color: #526d8a;
     margin: 0;
+    font-size: 18px;
 }
