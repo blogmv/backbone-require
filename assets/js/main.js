@@ -26,7 +26,7 @@ require.config({
 require(
     [
         'backbone',
-        'views/app',
+        'view/app',
     ],
     function (Backbone, AppView) {
         var app = new AppView();
