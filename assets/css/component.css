@@ -45,6 +45,11 @@ h2 {
     margin-top: 15px;
 }
 
+article {
+    border-bottom: 1px solid #f4f4f4;
+    margin-bottom: 35px;
+}
+
 article p {
     font: 100 18px/25px helvetica;;
 }
@@ -56,14 +61,22 @@ h3 {
     color: #fff;
 }
 
-.subscribe {
-    background: #1b222a;
-    padding: 20px 0;
+.form-allowed-tags {
+    text-align: center;
 }
 
-.subscribe form {
+.comments {
+    padding: 20px 0;
+    background: #1b222a;
+}
+
+.comments form {
     margin: 25px auto;
-    max-width: 400px;
+    max-width: 600px;
+}
+
+textarea {
+    margin-top: 10px;
 }
 
 .btn {
@@ -77,6 +90,20 @@ ul {
     list-style: none;
 }
 
+.discussion {
+    padding: 0;
+}
+
+.discussion li {
+    background: #f5f5f5;
+    margin: 10px 0;
+    padding: 20px 15px;
+}
+
+.discussion p {
+    font-size: 16px;
+}
+
 footer {
     background-color: #203041;
     padding: 20px 0;
@@ -86,6 +113,6 @@ footer {
 
 footer p {
     color: #526d8a;
-    margin: 0;
     font-size: 18px;
+    margin: 0;
 }

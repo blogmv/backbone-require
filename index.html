@@ -37,32 +37,62 @@
                         <li><a href="#" class="list-group-item">Article 012</a></li>
                         <li><a href="#" class="list-group-item">Article 345</a></li>
                     </ul>
-                </div>
+                </div><!--col-md-3-->
 
-                <article class="col-md-9">
-                    <h2>Lorem ipsum dolor sit amet</h2>
+                <section class="col-md-9">
+                    <article>
+                        <h2>Lorem ipsum dolor sit amet</h2>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Non illum, cumque, laborum consequatur inventore, quisquam
-                    sint a at nobis doloribus consectetur voluptate excepturi
-                    sunt laboriosam veniam. Possimus at obcaecati quae.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Non illum, cumque, laborum consequatur inventore, quisquam
+                        sint a at nobis doloribus consectetur voluptate excepturi
+                        sunt laboriosam veniam. Possimus at obcaecati quae.</p>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Non illum, cumque, laborum consequatur inventore, quisquam
-                    sint a at nobis doloribus consectetur voluptate excepturi
-                    sunt laboriosam veniam. Possimus at obcaecati quae.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Non illum, cumque, laborum consequatur inventore, quisquam
+                        sint a at nobis doloribus consectetur voluptate excepturi
+                        sunt laboriosam veniam. Possimus at obcaecati quae.</p>
+                    </article>
 
-                </article>
+                    <h2>Discussion</h2>
+
+                    <ul class="discussion">
+                        <li>
+                            <b>Gabriel Zigolis</b>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Consequuntur, voluptatum. Provident accusamus sit,
+                             commodi corrupti illo, veniam possimus minima rerum
+                             itaque. Magni, beatae, facere.</p>
+                        </li>
+                        <li>
+                            <b>Fernando Jorge Mota</b>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Consequuntur, voluptatum. Provident accusamus sit,
+                             commodi corrupti illo, veniam possimus minima rerum
+                             itaque. Magni, beatae, facere.</p>
+                        </li>
+                    </ul>
+                </section><!--col-md-9-->
             </div>
         </section><!-- container -->
 
-        <section class="row">
-            <div class="col-md-12 subscribe">
-                <h3>Get notified when news are available</h3>
+        <section class="row comments">
+            <div class="col-md-12">
+                <h3>Write a comment</h3>
 
                 <form>
-                    <input type="email" id="email" class="form-control input-lg" placeholder="Inform your email">
-                    <button class="btn btn-lg btn-alert btn-block" type="submit">Subscribe</button>
+                    <span class="col-md-6">
+                        <input type="text" id="name" class="form-control input-lg" placeholder="Name">
+                    </span>
+
+                    <span class="col-md-6">
+                        <input type="email" id="email" class="form-control input-lg" placeholder="Email">
+                    </span>
+
+                    <span class="col-md-12">
+                        <textarea id="msg" class="form-control input-lg" placeholder="Comment"></textarea>
+                        <button class="btn btn-lg btn-alert btn-block" type="submit">Post comment</button>
+                    </span>
                 </form>
             </div>
         </section>
