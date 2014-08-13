@@ -15,15 +15,15 @@ define(
             initialize: function () {
                 this.activeModel = new ArticleModel();
 
-                this.listenTo(this.activeModel, 'change', this.render)
+                this.listenTo(this.activeModel, 'change', this.createArticleContent)
             },
 
-            render: function() {
-                // console.log(this.activeModel)
-
+            createArticleContent: function() {
                 this.$el.find('article').html(this.template({
                     'activeModel' : this.activeModel
                 }));
+
+
             }
         });
 
