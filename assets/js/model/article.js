@@ -7,7 +7,13 @@ define(
         'use strict';
 
         var ArticleModel = Backbone.Model.extend({
-            //url: 'http://blogmv.apiary-mock.com/api/articles'
+            getTitle: function() {
+                return this.get('title');
+            },
+
+            getContent: function() {
+                return this.get('content');
+            }
         });
 
         return ArticleModel;

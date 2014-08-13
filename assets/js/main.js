@@ -27,10 +27,13 @@ require(
     [
         'backbone',
         'view/app',
+        'view/articleContent'
     ],
-    function (Backbone, AppView) {
+    function (Backbone, AppView, ArticleContentView) {
         var app = new AppView();
+        var articleContent = new ArticleContentView();
 
         app.render();
+        articleContent.render();
     }
 );

@@ -31,17 +31,26 @@
                     <h2>JS News</h2>
 
                     <ul class="list-group">
-                        <li><a href="#" class="list-group-item">Article 123</a></li>
-                        <li><a href="#" class="list-group-item">Article 456</a></li>
-                        <li><a href="#" class="list-group-item">Article 789</a></li>
-                        <li><a href="#" class="list-group-item">Article 012</a></li>
-                        <li><a href="#" class="list-group-item">Article 345</a></li>
+                        <script type="text/html" id="tmp-article-list">
+                            <% collection.each(function(model){ %>
+                                <li>
+                                    <a href="article/<%= model.id %>" class="list-group-item">
+                                        <%= model.getTitle() %>
+                                    </a>
+                                </li>
+                            <% }); %>
+                        </script>
                     </ul>
                 </div><!--col-md-3-->
 
                 <section class="col-md-9">
                     <article>
-                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <script type="text/html" id="tmp-article-content">
+                            <h2><%= activeModel.getTitle() %></h2>
+                            <p><%= activeModel.getContent() %></p>
+                        </script>
+
+                        <!-- <h2>Lorem ipsum dolor sit amet</h2>
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Non illum, cumque, laborum consequatur inventore, quisquam
@@ -51,7 +60,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Non illum, cumque, laborum consequatur inventore, quisquam
                         sint a at nobis doloribus consectetur voluptate excepturi
-                        sunt laboriosam veniam. Possimus at obcaecati quae.</p>
+                        sunt laboriosam veniam. Possimus at obcaecati quae.</p> -->
                     </article>
 
                     <h2>Discussion</h2>

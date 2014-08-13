@@ -9,16 +9,40 @@ define(
         'use strict';
 
         var AppView = Backbone.View.extend({
-            el: '.header',
+            template: _.template( $('#tmp-article-list').html() ),
 
-            events: {
-            },
+            el: '.main',
 
             initialize: function () {
-                this.articleCollection = new ArticleCollection();
-                this.articleCollection.fetch();
+                this.collection = new ArticleCollection();
+                this.collection.fetch();
 
-                console.log('...');
+                this.activeModel = new ArticleModel();
+
+                this.listenTo(this.collection, 'sync', this.createArticleList);
+                this.listenTo(this.collection, 'sync', this.setFirstModelAsActive);
+            },
+
+            createArticleList: function() {
+                this.$el.find('.list-group').html(this.template({
+                    'collection' : this.collection
+                }));
+            },
+
+            setFirstModelAsActive: function() {
+                var index = this.collection.at(0);
+
+                if (!index) {
+                    this.activeModel.clear();
+                    return
+                }
+
+                // console.log(index.id)
+                // console.log("tem" + index.toJSON())
+                index = index.toJSON();
+                this.activeModel.set(index);
+
+                console.log(index)
             }
         });
 

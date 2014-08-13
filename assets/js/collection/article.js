@@ -8,8 +8,8 @@ define(
         'use strict';
 
         var ArticleCollection = Backbone.Collection.extend({
-            model: ArticleModel,
-            url:   'http://blogmv.apiary-mock.com/api/articles'
+            url:   'http://blogmv.apiary-mock.com/api/articles',
+            model: ArticleModel
         });
 
         return ArticleCollection;
