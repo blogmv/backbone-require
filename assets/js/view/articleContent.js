@@ -1,10 +1,9 @@
 define(
     'view/articleContent',
     [
-        'backbone',
-        'model/article'
+        'backbone'
     ],
-    function (Backbone, ArticleModel) {
+    function (Backbone) {
         'use strict';
 
         var ArticleContentView = Backbone.View.extend({
@@ -12,18 +11,15 @@ define(
 
             el: '.main',
 
-            initialize: function () {
-                this.activeModel = new ArticleModel();
-
-                this.listenTo(this.activeModel, 'change', this.createArticleContent)
+            initialize: function (activeModel) {
+                this.activeModel = activeModel;
+                this.listenTo(this.activeModel, 'change', this.render);
             },
 
-            createArticleContent: function() {
+            render: function() {
                 this.$el.find('article').html(this.template({
                     'activeModel' : this.activeModel
                 }));
-
-
             }
         });
 

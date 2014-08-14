@@ -2,10 +2,9 @@ define(
     'view/app',
     [
         'backbone',
-        'model/article',
         'collection/article'
     ],
-    function (Backbone, ArticleModel, ArticleCollection) {
+    function (Backbone, ArticleCollection) {
         'use strict';
 
         var AppView = Backbone.View.extend({
@@ -13,17 +12,17 @@ define(
 
             el: '.main',
 
-            initialize: function () {
+            initialize: function (activeModel) {
                 this.collection = new ArticleCollection();
                 this.collection.fetch();
 
-                this.activeModel = new ArticleModel();
+                this.activeModel = activeModel;
 
-                this.listenTo(this.collection, 'sync', this.createArticleList);
+                this.listenTo(this.collection, 'sync', this.render);
                 this.listenTo(this.collection, 'sync', this.setFirstModelAsActive);
             },
 
-            createArticleList: function() {
+            render: function() {
                 this.$el.find('.list-group').html(this.template({
                     'collection' : this.collection
                 }));
@@ -37,12 +36,8 @@ define(
                     return
                 }
 
-                // console.log(index.id)
-                // console.log("tem" + index.toJSON())
                 index = index.toJSON();
                 this.activeModel.set(index);
-
-                console.log(index)
             }
         });
 

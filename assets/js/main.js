@@ -26,14 +26,14 @@ require.config({
 require(
     [
         'backbone',
+        'model/article',
         'view/app',
         'view/articleContent'
     ],
-    function (Backbone, AppView, ArticleContentView) {
-        var app = new AppView();
-        var articleContent = new ArticleContentView();
+    function (Backbone, ArticleModel, AppView, ArticleContentView) {
+        var activeModel = new ArticleModel();
 
-        app.render();
-        articleContent.render();
+        var app = new AppView(activeModel);
+        var articleContent = new ArticleContentView(activeModel);
     }
 );
