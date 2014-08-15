@@ -8,8 +8,13 @@ define(
         'use strict';
 
         var CommentCollection = Backbone.Collection.extend({
-            url:   'http://blogmv.apiary-mock.com/api/articles/1/comments',
-            model: CommentModel
+            model: CommentModel,
+            url: function(){
+                return "http://blogmv.apiary-mock.com/api/articles/"+this.article.id+"/comments"
+            },
+            initialize: function(models, options){
+                this.article = options.article
+            }
         });
 
         return CommentCollection;
