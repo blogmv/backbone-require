@@ -1,10 +1,11 @@
 define(
     'view/app',
     [
+        'jquery',
         'backbone',
         'collection/article'
     ],
-    function (Backbone, ArticleCollection) {
+    function ($, Backbone, ArticleCollection) {
         'use strict';
 
         var AppView = Backbone.View.extend({

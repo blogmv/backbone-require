@@ -1,10 +1,10 @@
 define(
     'view/articleComment',
     [
-        'backbone',
-        'collection/comment'
+        'jquery',
+        'backbone'
     ],
-    function (Backbone, CommentCollection) {
+    function ($, Backbone) {
         'use strict';
 
         var ArticleCommentsView = Backbone.View.extend({
@@ -14,17 +14,17 @@ define(
 
             initialize: function (activeModel) {
                 this.activeModel = activeModel;
-                this.listenTo(this.activeModel, 'change', this.render);
+                this.listenTo(this.activeModel, 'change', this.fetchComments);
+            },
 
-                this.collection = new CommentCollection();
-                this.collection.fetch();
-
-                this.listenTo(this.collection, 'sync', this.render);
+            fetchComments: function(){
+                this.activeModel.comments.once('sync', this.render, this);
+                this.activeModel.comments.fetch();
             },
 
             render: function() {
                 this.$el.html(this.template({
-                    'collection' : this.collection
+                    'collection' : this.activeModel.comments
                 }));
             }
         });

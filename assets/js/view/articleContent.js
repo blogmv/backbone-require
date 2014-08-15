@@ -1,9 +1,10 @@
 define(
     'view/articleContent',
     [
+        'jquery',
         'backbone'
     ],
-    function (Backbone) {
+    function ($, Backbone) {
         'use strict';
 
         var ArticleContentView = Backbone.View.extend({
