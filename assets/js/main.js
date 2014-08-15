@@ -27,13 +27,15 @@ require(
     [
         'backbone',
         'model/article',
+        'model/comment',
         'view/app',
-        'view/articleContent'
+        'view/articleContent',
+        'view/articleComment'
     ],
-    function (Backbone, ArticleModel, AppView, ArticleContentView) {
-        var activeModel = new ArticleModel();
-
-        var app = new AppView(activeModel);
+    function (Backbone, ArticleModel, CommentModel, AppView, ArticleContentView, ArticleCommentsView) {
+        var activeModel    = new ArticleModel();
+        var app            = new AppView(activeModel);
         var articleContent = new ArticleContentView(activeModel);
+        var articleComment = new ArticleCommentsView(activeModel);
     }
 );

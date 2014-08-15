@@ -54,20 +54,14 @@
                     <h2>Discussion</h2>
 
                     <ul class="discussion">
-                        <li>
-                            <b>Gabriel Zigolis</b>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Consequuntur, voluptatum. Provident accusamus sit,
-                             commodi corrupti illo, veniam possimus minima rerum
-                             itaque. Magni, beatae, facere.</p>
-                        </li>
-                        <li>
-                            <b>Fernando Jorge Mota</b>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Consequuntur, voluptatum. Provident accusamus sit,
-                             commodi corrupti illo, veniam possimus minima rerum
-                             itaque. Magni, beatae, facere.</p>
-                        </li>
+                        <script type="text/html" id="tmp-article-comments">
+                            <% collection.each(function(model){ %>
+                                <li>
+                                    <b><%= model.getAuthorName() %></b>
+                                    <p><%= model.getContent() %></p>
+                                </li>
+                            <% }); %>
+                        </script>
                     </ul>
                 </section><!--col-md-9-->
             </div>
