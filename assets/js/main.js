@@ -25,14 +25,12 @@ require.config({
 
 require(
     [
-        'backbone',
         'model/article',
-        'model/comment',
         'view/app',
         'view/articleContent',
         'view/articleComment'
     ],
-    function (Backbone, ArticleModel, CommentModel, AppView, ArticleContentView, ArticleCommentsView) {
+    function (ArticleModel, AppView, ArticleContentView, ArticleCommentsView) {
         var activeModel    = new ArticleModel();
         var app            = new AppView(activeModel);
         var articleContent = new ArticleContentView(activeModel);
