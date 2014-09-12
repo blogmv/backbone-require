@@ -18,6 +18,7 @@ define(
             },
 
             fetchComments: function(){
+                this.activeModel.comments.reset();
                 this.activeModel.comments.once('sync', this.render, this);
                 this.activeModel.comments.fetch();
             },

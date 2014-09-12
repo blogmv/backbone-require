@@ -25,15 +25,12 @@ require.config({
 
 require(
     [
-        'model/article',
-        'view/app',
-        'view/articleContent',
-        'view/articleComment'
+        'backbone',
+        'route/app'
     ],
-    function (ArticleModel, AppView, ArticleContentView, ArticleCommentsView) {
-        var activeModel    = new ArticleModel();
-        var app            = new AppView(activeModel);
-        var articleContent = new ArticleContentView(activeModel);
-        var articleComment = new ArticleCommentsView(activeModel);
+    function (Backbone, Router) {
+        var router = new Router(function(){
+            Backbone.history.start({'pushState': false, 'hashChange': true});
+        });
     }
 );

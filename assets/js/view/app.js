@@ -2,10 +2,9 @@ define(
     'view/app',
     [
         'jquery',
-        'backbone',
-        'collection/article'
+        'backbone'
     ],
-    function ($, Backbone, ArticleCollection) {
+    function ($, Backbone) {
         'use strict';
 
         var AppView = Backbone.View.extend({
@@ -13,32 +12,15 @@ define(
 
             el: '.main',
 
-            initialize: function (activeModel) {
-                this.collection = new ArticleCollection();
-                this.collection.fetch();
-
-                this.activeModel = activeModel;
-
+            initialize: function (options) {
+                this.activeModel = options.activeModel;
                 this.listenTo(this.collection, 'sync', this.render);
-                this.listenTo(this.collection, 'sync', this.setFirstModelAsActive);
             },
 
             render: function() {
                 this.$el.find('.list-group').html(this.template({
                     'collection' : this.collection
                 }));
-            },
-
-            setFirstModelAsActive: function() {
-                var index = this.collection.at(0);
-
-                if (!index) {
-                    this.activeModel.clear();
-                    return
-                }
-
-                index = index.toJSON();
-                this.activeModel.set(index);
             }
         });
 
