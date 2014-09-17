@@ -15,11 +15,12 @@ define(
             initialize: function (activeModel) {
                 this.activeModel = activeModel;
                 this.listenTo(this.activeModel, 'change', this.fetchComments);
+                this.listenTo(this.activeModel.comments, 'sync', this.render);
+                this.listenTo(this.activeModel.comments, 'add', this.render);
             },
 
             fetchComments: function(){
                 this.activeModel.comments.reset();
-                this.activeModel.comments.on('add', this.render, this);
                 this.activeModel.comments.fetch();
             },
 
