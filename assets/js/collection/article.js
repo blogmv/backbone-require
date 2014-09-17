@@ -8,7 +8,7 @@ define(
         'use strict';
 
         var ArticleCollection = Backbone.Collection.extend({
-            url:   'http://blogmv.apiary-mock.com/api/articles',
+            url:   'http://blogmv-api.appspot.com/api/articles',
             model: ArticleModel
         });
 

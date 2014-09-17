@@ -7,6 +7,7 @@ define(
         'view/app',
         'view/articleContent',
         'view/articleComment',
+        'view/articleCommentForm',
         'collection/article'
     ],
     function
@@ -17,6 +18,7 @@ define(
             AppView,
             ArticleContentView,
             ArticleCommentsView,
+            ArticleCommentsFormView,
             ArticleCollection
         ) {
         'use strict';
@@ -37,6 +39,7 @@ define(
 
                 this.articleContent = new ArticleContentView(this.activeModel);
                 this.articleComment = new ArticleCommentsView(this.activeModel);
+                this.articleCommentForm = new ArticleCommentsFormView(this.activeModel);
 
                 this.collection.once('sync', function(){
                     callback();
